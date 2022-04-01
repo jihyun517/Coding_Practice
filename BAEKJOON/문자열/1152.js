@@ -6,3 +6,16 @@
 
 // 출력
 // 첫째 줄에 단어의 개수를 출력한다.
+
+const fs = require('fs')
+let input = fs.readFileSync('../input.txt').toString().split(' ');
+
+function solution(input){
+  let len = input.length;
+  if(input[0] === '' || input[len-1] === ''){
+    len = len-1;
+  }
+  console.log(len);
+}
+console.log(input);
+solution(input);
