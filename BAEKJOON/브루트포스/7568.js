@@ -29,10 +29,15 @@ function solution(num, people){
   let rank = [];
 
   for(var i = 0; i <= num-1; i++){
-
+    rank[i] = 1;
+    for(var j = 0; j<= num-1; j++){
+      if(people[i][0]<people[j][0] && people[i][1]<people[j][1]){
+        rank[i]++;
+      }
+    }
   }
+  console.log(rank.join(' '));
 
 }
-
 
 solution(num, people);
