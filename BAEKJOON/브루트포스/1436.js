@@ -12,5 +12,20 @@
 // 첫째 줄에 N번째 영화의 제목에 들어간 수를 출력한다.
 
 const fs = require('fs');
-let input = fs.readFileSync('../input.txt').toString();
+let input = Number(fs.readFileSync('../input.txt').toString());
 
+function solution(number){
+  let first = 665;
+
+  while(number>0){
+    first++;
+    if(first.toString().includes('666')){
+      number--;
+    }    
+  }
+
+  console.log(first);
+
+}
+
+solution(input);
